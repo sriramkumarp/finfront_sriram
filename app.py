@@ -82,7 +82,6 @@ def delete_price():
 def slow_endpoint():
     if 'user' not in session:
         return redirect(url_for('login'))
-
     try:
         response = requests.get(f"{BACKEND_API_BASE}/api/slow-endpoint")
         result = response.text
